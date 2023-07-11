@@ -21,7 +21,7 @@ class App(CTK.CTk):
         file_path = filedialog.askopenfilename(title="Select Image", filetypes=[("Image Files", "*.jpg *.jpeg *.png")])
         if file_path:
             result = reader.readtext(file_path, detail=0, paragraph=True)
-            self.translate_field.insert('1.0', result)
+            self.input_field.insert('1.0', result)
 
     def get_input_text(self):
         text = self.input_field.get('1.0', END).strip()
